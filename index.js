@@ -83,23 +83,44 @@ your program should throw an error, letting the user know that the input was inv
 Similar data validation should occur elsewhere within the program.
 */
 
-function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
-    if(AssignmentGroup.course_id !== CourseInfo.id) {
-        throw new Error('Assigment Course ID does not match the course') // throw an error if ID's dont match
-    }
+// function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
+//     if(AssignmentGroup.course_id !== CourseInfo.id) {
+//         throw new Error('Assigment Course ID does not match the course') // throw an error if ID's dont match
+//     }
 
-    console.log('All good in the hood')
+//     console.log('Assigment course ID matches this course')
 
-    for (let submission of LearnerSubmissions){
-        console.log(submission.learner_id);
-        console.log(submission.assignment_id);
-        console.log(submission.submission.score);
-    }
-}
+// //     for (let submission of LearnerSubmissions){   //looping through submissions object and logging the data
+// //         // console.log(submission.learner_id);
+// //         // console.log(submission.assignment_id);
+// //         // console.log(submission.submission.score);
+// //     }
+// // }
+
+// trying to group the data by learner with a for loop... so i want one object for each learner. 
+let results= []
+
+   for (let submission of LearnerSubmissions){
+    let learnerID = submission.learner_id;
+    let assignmentID = submission.assignment_id;
+    let score = submission.submission.score;
+    
+    let learner = {
+      id: learnerID,
+      assignmentID: assignmentID,
+      score: score,
+    };
+    results.push(learner)
+   }
+   
+
+   console.log(results)
+
+// try{
+// getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
+// } catch (error) {                //catching the error object in the function
+//     console.log(error.message)   //error.message extracts just the message in the Error object 
+// }
 
 
-try{
-getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
-} catch (error) {
-    console.log(error.message)
-}
+// loop that gets each learner ID, and assignment ID, and score
