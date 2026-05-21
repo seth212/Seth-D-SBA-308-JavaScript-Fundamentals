@@ -1,6 +1,5 @@
 PROJECT NAME: JavaScript Fundamentals SBA
 
-
 DESCRIPTION:
 This project processes learner submission data for a course and transforms it into a structured learner report.
 
@@ -19,7 +18,6 @@ TECHNOLOGIES USED:
 - JavaScript
 - Node.JS
 - VS Code
-
 
 Created by: Seth Darkwah
 Date: 5/20/2026
