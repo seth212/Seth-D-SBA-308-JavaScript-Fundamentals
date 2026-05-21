@@ -88,8 +88,6 @@ function getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions) {
         throw new Error('Assigment Course ID does not match the course') // throw an error if ID's dont match
     }
 
-    // console.log('Assigment course ID matches this course')
-
  }
 
 // trying to group the data by learner with a for loop... so i want one object for each learner. 
@@ -136,4 +134,6 @@ try{
 getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 } catch (error) {                //catching the error object in the function
     console.log(error.message)   //error.message extracts just the message in the Error object 
+} finally{
+  console.log('The assignment ID matched with this course')
 }
