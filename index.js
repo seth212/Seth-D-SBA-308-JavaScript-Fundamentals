@@ -132,8 +132,6 @@ let results= []
     
     
    }
-   
-
    console.dir(results, {depth: null})
 
 try{
