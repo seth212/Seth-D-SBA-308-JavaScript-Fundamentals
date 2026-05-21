@@ -106,13 +106,13 @@ let results= []
     for(let i = 0; i < results.length; i++) {
       if(results[i].id === learnerID){
         learnerExists = true;
-      }
 
-      //  add submission data to learner
+        //  add submission data to learner
       results[i].submissions.push({
         assignmentID: assignmentID,
         score: score
       });
+    }
     }
 
     // if learner does not exist yet.. also this is the second if statement.
@@ -141,6 +141,3 @@ getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
 } catch (error) {                //catching the error object in the function
     console.log(error.message)   //error.message extracts just the message in the Error object 
 }
-
-
-// loop that gets each learner ID, and assignment ID, and score
