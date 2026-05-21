@@ -129,8 +129,6 @@ let results= []
       results.push(learner)
     }
   
-    
-    
    }
    console.dir(results, {depth: null})
 

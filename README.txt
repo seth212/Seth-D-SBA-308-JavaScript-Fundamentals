@@ -6,14 +6,13 @@ This project processes learner submission data for a course and transforms it in
 
 The program validates course data, processes learner submissions, groups data by learner, and calculates assignment-related information using JavaScript.
 
-
 FEATURES:
 
 - Uses loops, arrays and objects
-- Array methods like push() and find() were used.
+- Array methods like push() were used.
+- If statements were utilized in this project.
 - Try catch error handling
 - Groups submissions by learner
-
 
 TECHNOLOGIES USED:
 
