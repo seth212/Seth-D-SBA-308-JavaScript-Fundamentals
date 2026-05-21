@@ -134,7 +134,7 @@ let results= []
    }
    
 
-   console.log(results)
+   console.dir(results, {depth: null})
 
 try{
 getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
